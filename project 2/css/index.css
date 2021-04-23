@@ -1,0 +1,675 @@
+/*les régles non spécifiques avant les régles spécifiques*/
+/********************Sur Desktop**************************/
+body{
+   font-family: 'Raleway', sans-serif;   /*police d'écriture Raleway*/
+   margin: 0;
+   padding: 0;
+}
+*{
+   box-sizing: border-box;
+}
+/**************** Header , en tête de l'intégration de la maquette , DESKTOP***************************/
+
+.container{
+    width: 93%;            
+    margin: 0px auto; /* pour ne pas prendre 100% de la page par defaut , margin pour centré les éléments
+                                 a condition qu'il soit de type bloc et la largeur défini*/      
+}                 
+.logo{
+    flex-basis: 65%;/* il donne une valeur a un élément
+                       dans le cas d'un axe horizontal ou vertical
+                       en fonction du flex direction 
+                       on va priviligié sont utilisation 
+                       et il écrasera le width et le height */ 
+}
+nav{ 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -14px;
+    margin-right: 10px;
+}
+nav a{
+    padding: 48px  0px; 
+    text-decoration: none; 
+    color: grey;
+    font-size: 20px;
+}
+.sinscrire{
+    color: #0065FC;
+    padding-right: 0;
+    font-weight: bold;
+}
+nav a:hover{
+    color:#0065FC;
+}
+.hebergements:hover{
+    border-top: 2px solid #0065FC;
+  
+}
+.activites:hover{
+    border-top: 2px solid #0065FC;   
+}
+
+/********************form*******************/
+
+h1{
+    font-size: 20px;
+    margin: 30px 0 0; /*30px de marge extérieur top et le reste est nul...*/
+}
+h1 + p{
+    margin-top: 10px; /* css avancé , P du meme niveau et qui suit directement le h1*/
+}
+#form{
+    display:flex;  /*ceci est la place de la recherche*/
+    margin-top: 33px;
+}
+input{
+    padding: 17px;
+    border:1px solid #dddddd;
+}
+input::placeholder{
+    color: #000;
+    font-weight: bold;
+    font-size: 16.5px;/* on a mis 16.5px font-size ou 1.2em
+                        pour que le navigateur fire fox puisse l'accepter */
+}
+input[type=submit]{
+    color: #fff;
+    background-color: #0051F8;
+    font-weight: bold;
+    border-radius: 0 10px 10px 0;
+    margin-left: -5px;
+    border: none;
+}
+.fa-map-marker-alt{
+    padding: 15px;
+    background-color: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    width: 45px;
+}
+.economique:hover{
+    color: #0065FC;
+}
+
+/*******************  filtre **********************/
+
+#filtre{
+    width: 75%;
+    display: flex;
+    margin-top: 15px;
+}
+#filtre h3{
+    padding-top: 16px;/*on cible le h3 du filtre*/
+    font-size: 20px;
+}
+#filtre > ul{     /* ul l'enfant direct du filtre*/
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 24px;
+}
+#filtre > ul > li{
+    padding: 0px 97px;
+    border:2px solid #dddddd;
+    border-radius: 30px; 
+}
+#filtre a {
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 10px;
+}
+#filtre .fas{
+    padding: 21px 20px;
+    margin-left: -100px;
+    border-radius: 50%;
+    color: #0065FC;
+    background-color: #D4EAFF;
+}
+.fa-info{
+    font-size: 12px;
+    padding: 5px 8px;
+    margin-right: 10px;
+    color:#0065FC ;
+    border:1px solid #D4EAFF;
+    border-radius: 50%;
+}
+#filtre a:hover{
+    color: #0065FC;
+}
+.fa-money-bill-wave:hover{
+    color: green!important;
+}
+.fa-child:hover{
+    color: orange!important;
+}
+.fa-heart:hover{
+     color: red!important;
+}
+.fa-dog:hover{
+     color: rgb(197, 107, 43)!important;
+}
+
+/********************** hebergements ***********************/
+
+.afficher:hover{ /*c'est le bouton qui permet plus d'information, et il s'affiche en bleu lorsque 
+    le curseur est dessus avec la propriété hover*/
+    color: #0065FC;
+}
+#hebergement{
+    display: flex; /* pour que la partie aside puisse etre a côté */   
+}
+#hebergement > section > a{
+    font-weight: bold;
+    padding-left: 10px;
+}
+#hebergement h4 , #hebergement p{
+    color: #000;
+    padding: 5px;
+    padding-left: 15px;
+    margin: 0;
+}
+#hebergement section h2{
+  padding-left: 23px;
+}
+#hebergement h2{
+    font-size: 22px;
+    margin: 20px 0;
+    padding-left: 4px;
+}
+#hebergement section,aside{
+    padding: 12px 20px 40px 17px;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+}
+#hebergement section{
+    margin-top: 15px;
+    margin-right: 41px;
+    width: 70%;
+}
+#hebergement ul{
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 0px;
+}
+#hebergement ul > li{
+    margin-bottom: 30px;
+    padding:5px;
+    border-radius: 20px;
+    width: 30%;
+    background-color: #FFF;
+}
+#hebergement *{
+    margin: -4;
+}
+#hebergement p > span{
+    font-weight: bold;
+}
+#hebergement img{
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 205px;
+    padding-bottom: 6px;
+    object-fit: cover;
+}
+.stars{
+    padding: 10px 0 5px 5px;
+    color: #0065FC;
+    padding-left: 15px;
+    padding-bottom: 9px;
+}
+.starGrey{
+    color: #D2D0D4!important;
+}
+/**************Partie Aside les plus populaires ***************/
+
+aside .stars{
+    margin-top: 50%!important;
+}
+aside .coeur{
+    margin-top: 82px!important;
+}
+aside{
+    margin-top: 15px;
+    margin-left: 25px;
+    width: 30%;
+    padding-bottom: 0;
+}
+aside img{
+    border-radius: 20px 0 0 20px!important;
+    width: 38%!important;
+    object-fit: cover;
+    height: 100%;
+}
+aside img + div{
+    padding: 8px;
+}
+aside > div{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;   /*ya de l'espace entre eux*/
+}
+aside ul{
+    display: flex;
+    flex-direction: column;  /* organisé sur colonne*/
+    width: 100%;
+    justify-content: space-between;
+}
+aside li{
+    width: 100%!important;
+    height: 210px;
+}
+aside li a {
+    display: flex;
+}
+aside li a > div {height: 100%;
+}
+.fa-chart-line{
+    font-size: 20px;
+    padding-top: 10px;
+    margin-top: 10px!important;
+}
+.populaires h2{
+     width: 85%;
+}
+.populaires{  /*le parent de h2 qu'il prenne une largeur de 100% de manière 
+                a que sont enfant h2 puisse prendre 
+                toute la place possible et ne pas ce retrouver sur deux lignes ou 3*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    vertical-align:middle;
+}
+
+/***********Section activites à Marseille*************/
+
+#activites{
+    margin: 80px 0 0;
+}
+#activites > div{
+    display: flex;
+    justify-content: space-between;
+}
+#activites > div > figure , #activites > div > div{
+    width: 30%;
+}
+#activites > div > figure:first-child{
+    margin-left: 0!important;
+}
+#activites> div > figure img{
+    height: 515px;
+}
+.grandePhoto{
+    height: 215px;
+}
+#activites figure {  
+    border-radius: 40px;
+    box-shadow: 10px 14px 5px #f0f0f0;
+}
+#activites img{
+    border-radius: 40px 40px 0 0;
+    width: 100%;
+    padding-top: 20px;
+    object-fit: cover; /*pour rendre les images claires */
+}
+figcaption{
+    padding:8px;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    padding-left: 25px;/* les légendes en dessous des images*/
+}
+
+/********** footer, le pied de page ************/
+#footer{
+    margin-top: 30px;
+    background-color: #F2F2F2;
+    display: flex;       
+}
+#footer div{
+                    flex:1;/* on optimise en mettant qu'une seule div , sans répéter cette opération
+                    plusieurs fois on cible avec footer div pour englober toutes les div*/
+}
+h3{ 
+    color: black; /* couleur noir pour notre titre de categorie 3 A propos , Nos hébergements , Assistance */
+}
+h3:hover{
+    color: #0065FC;/*stylisé les titres de type h3 du footer*/
+}
+ul li{
+   list-style-type: none; /*propriétés qui sert à retirer les puces devant les éléments*/
+}
+a{  
+   color: #000;
+   text-decoration: none;
+   text-decoration-line: none;/* aucune ligne ne décore le texte*/
+}
+
+/**************************RESPONSIVE*****************************/
+
+/*premier Breakpoint*/
+
+@media screen and ( max-width: 1665px){
+.logo{
+        flex-basis: 55%;
+}
+#filtre{
+        width: 100%;
+        display: flex;
+        margin-top: 15px;
+}
+figcaption{
+        padding: 29px;
+}
+}  
+
+/*Deuxième Breakpoint*/
+@media screen and (max-width: 1288px){
+
+.logo{
+    flex-basis: 28%;
+}   
+nav a {
+     padding: 40px 0;
+}
+h1+p{
+    margin-top: 15px;
+}
+#form{  
+    display: flex;
+    margin-top: 40px;
+    margin-left: 35%;
+}
+#filtre{
+     display: flex;
+     flex-direction: column;
+}
+#filtre+p{
+     margin-bottom: 25px;
+
+}
+#filtre+p{
+     text-align: left;
+
+}
+#filtre > ul > li {
+        margin-bottom: 30px;
+}
+main h1{
+    text-align:center;  
+} 
+main p{
+    text-align: center;
+
+} 
+#activites img{
+         padding-top: 51px;
+}
+figcaption{
+        padding:24px;
+}
+}
+
+/*Troisième Breakpoint*/
+@media  screen and (max-width: 1130px){
+.logo{
+    flex-basis: 30%;
+}    
+main h1{
+    text-align: left;
+}
+main p{
+    text-align: left;
+}
+h1+p{
+    text-align: left;
+}
+#form {
+     margin-left: 0;
+}
+#filtre > ul {
+    width: 70%;
+    display: block;
+}
+#filtre h3 {
+    font-size: 20px;
+}
+#filtre a{
+    font-size: 20px;
+}
+#hebergement section{
+    margin-right: 41px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white!important;
+}     
+aside{
+    margin-left: 0;
+    width: 100%;
+}
+aside li{
+            width: 100%;
+            height: 294px ;
+}
+aside img + div{
+    padding-top:3%;
+}
+aside .stars{
+            margin-top: 63%!important;
+}
+aside .coeur{
+    margin-top: 43%!important;
+}
+#hebergement section,aside{
+    padding: 12px 28px 30px 17px;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+#activites > div > figure { 
+        width: 100%;
+        margin-bottom: 40px;
+}
+#activites > div > div{
+      width: 100%;
+}
+#activites figure{
+    margin: 0 0 40px;
+}
+#hebergement{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+#hebergement img{
+    height: 289px;
+}
+#hebergement ul {
+    flex-direction: column;
+}
+#hebergement ul > li {
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 10px 10px 15px #f0f0f0;
+}
+#activites > div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+#activites img{
+   padding-top: 0; 
+   height: 300px;
+   margin: 0 0 20px;
+}
+#activites> div> figure img{
+        height: 300px;
+}
+figcaption{
+    padding: 19px 10px 14px 25px;
+}
+#footer{
+    display: flex;
+}
+}
+
+/*Quatrième Breakpoint*/
+@media screen and (max-width:720px){
+.logo{
+    padding-left: 0;
+}
+nav{   
+  display: flex;
+  flex-wrap: wrap;
+  margin:0px;                     
+  padding: 0px;
+  list-style-type: none; 
+}
+nav a{
+   flex-basis: 50%;
+}
+nav a{
+   display: inline-block; /* afin de mieux les maitriser les éléments */
+   font-size: 1.3em;
+   padding: 40px 30px; 
+   text-decoration: none;  
+}
+.sinscrire{
+    order: 2;
+    text-align: right;
+}
+.hebergements{
+    order: 3;
+    text-align: center;
+}
+.activites{
+    order:4;
+    text-align: center;
+}
+.hebergements:hover{
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+}
+.activites:hover{
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+}
+h1{
+  font-size: 20px;
+}
+h1+p{
+   margin-top: 15px;
+}
+#filtre ul{
+
+    width: 100%;
+    display: block;
+}
+#footer{
+        display: flex;
+}      
+}
+
+
+/*cinquième Breakpoint*/
+@media screen and ( max-width: 480px){ 
+.logo{
+    padding-left: 0;
+}
+nav{   
+    display: flex;
+    flex-wrap: wrap;
+    margin:0px;                     
+    padding: 0px;
+    list-style-type: none; 
+}
+nav a{
+    display: inline-block; /* afin de mieux les maitriser les éléments */
+    font-size: 1.3em;
+    padding: 40px 30px; 
+    text-decoration: none; 
+    flex-basis: 50%;
+}
+#filtre h3{
+    font-size: 17px;
+}
+#filtre a{
+    font-size: 17px;
+}
+.hebergement:hover{
+    border-top: none;
+    border-bottom: 2px solid #0065FC;
+}
+.activites:hover{
+    border-top: none;
+    border-bottom: 2px solid #0065FC;
+}
+
+#form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 31px;
+}
+#filtre > ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: flex-start;
+}
+#filtre+p{
+    margin-bottom: 25px;
+}
+#filtre{
+    display: flex;
+    flex-direction: column;
+}
+#filtre > ul > li{
+    margin-bottom: 15px;
+}
+#hebergement img{
+    height: 225px;
+}
+#hebergement section h2{
+    padding-left: 9px;
+}
+#hebergement section,aside{
+    padding: 12px 8px 30px 8px;
+}
+aside .stars {
+    margin-top: 58%!important;
+}
+aside .coeur {
+    margin-top: 46%!important;
+}
+aside li {
+    height: 229px;
+}
+#activites {
+    margin:0;/*pour éviter les marges entre section activites à marseille 
+               et la première section et aside*/
+}
+#activites img{
+    height: 225px;
+}
+#activites>div>figure img{
+    height: 225px;
+}
+#acticites>div>figure{
+    width: 95%;
+}
+#activites h2{
+    padding-left: 25px;
+}
+#footer{
+     display: flex;
+     flex-direction: column; 
+}
+}
